@@ -2,11 +2,8 @@ class Solution {
     public int earliestTime(int[][] tasks) {
         int min = Integer.MAX_VALUE;
         for(int i=0;i<tasks.length;i++){
-            int sum =0;
-            for(int j=0;j<tasks[i].length;j++){
-                sum +=tasks[i][j];
-            }
-            min=Math.min(min,sum);
+           
+            min=Math.min(min,tasks[i][0]+tasks[i][1]);
         }
         return min;
     }
